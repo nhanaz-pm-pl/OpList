@@ -21,18 +21,17 @@ class Main extends PluginBase implements Listener {
 			$opNumbers = 0;
 			$opOnline = 0;
 			foreach (array_keys($this->getServer()->getOps()->getAll()) as $opName) {
+				$opNumbers++;
 				if ($this->getServer()->getPlayerByPrefix(strval(($opName)))) {
 					$opOnline++;
 				}
 			}
-			$sender->sendMessage(TF::GOLD . "List of operators " . TF::BLUE . "(Online: " . (($opOnline == 0) ? TF::RED . $opOnline :  TF::GREEN . $opOnline) . TF::BLUE . ")");
-			foreach (array_keys($this->getServer()->getOps()->getAll()) as $opName) {
-				$opNumbers++;
-				$sender->sendMessage(TF::YELLOW . "» " . TF::GREEN . $opNumbers . ". " . TF::BLUE . $opName . ($this->getServer()->getPlayerByPrefix(strval(($opName))) ? TF::GREEN . " (Online)" : TF::RED . " (Offline)"));
-			}
 			if (empty($opNumbers)) {
 				$sender->sendMessage(TF::YELLOW . "» " . TF::RED . "No operator");
 			}
+			$sender->sendMessage(
+				TF::GOLD . "List of operators " . TF::BLUE . "(Online: " . (($opOnline == 0) ? TF::RED . $opOnline :  TF::GREEN . $opOnline) . TF::BLUE . ")\n".
+				TF::YELLOW . "» " . TF::GREEN . $opNumbers . ". " . TF::BLUE . $opName . ($this->getServer()->getPlayerByPrefix(strval(($opName))) ? TF::GREEN . " (Online)" : TF::RED . " (Offline)"));
 		}
 		return true;
 	}
