@@ -1,0 +1,21 @@
+---
+name: OpList
+version: 1.0.0
+main: NhanAZ\OpList\Main
+api: 4.0.0
+src-namespace-prefix: NhanAZ\OpList
+
+website: https://github.com/NhanAZ
+description: Show list of operators
+author: NhanAZ
+
+commands:
+  oplist:
+    description: Show list of operators
+    aliases: [ops]
+    permission: oplist.command
+permissions:
+  oplist.command:
+    description: Permission for /oplist
+    default: true
+...
