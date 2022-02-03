@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener {
 				if ($this->getServer()->getPlayerByPrefix(strval(($opName)))) {
 					$opOnline++;
 				}
-				$sender->sendMessage(
+			$sender->sendMessage(
 				TF::GOLD . "List of operators " . TF::BLUE . "(Online: " . (($opOnline == 0) ? TF::RED . $opOnline :  TF::GREEN . $opOnline) . TF::BLUE . ")\n".
 				TF::YELLOW . "» " . TF::GREEN . $opNumbers . ". " . TF::BLUE . $opName . ($this->getServer()->getPlayerByPrefix(strval(($opName))) ? TF::GREEN . " (Online)" : TF::RED . " (Offline)"));
 			}
