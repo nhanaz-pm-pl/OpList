@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener {
 			if (empty($opNumbers)) {
 				$sender->sendMessage(TF::YELLOW . "» " . TF::RED . "No operator");
 			}
-			return true;
 		}
+		return true;
 	}
 }
