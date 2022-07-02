@@ -20,6 +20,11 @@ pageNotFound: "&e» §cPage not found!"
 # Messages sent to users when the server does not have an operator
 noOperator: "§e» §cNo operator!"
 
+# Last line of a page
+# You can disable this by below:
+# endPage: ""
+endPage: "&6==========================================="
+
 # Number of operators in a page
 perPage: 5
 ...

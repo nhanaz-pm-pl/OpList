@@ -90,5 +90,9 @@ class OpManager {
 				$sender->sendMessage(TextFormat::colorize($opListFormat));
 			}
 		}
+		$endPage = $this->getConfig()->get("endPage", "&6===========================================");
+		if ($endPage !== "") {
+			$sender->sendMessage(TextFormat::colorize($endPage));
+		}
 	}
 }
