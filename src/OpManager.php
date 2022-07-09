@@ -18,7 +18,7 @@ class OpManager {
 		return $this->plugin->getConfig();
 	}
 
-	private function handleOpListTag(int $page, int|float $maxPage): string {
+	private function handleOpListTag(int $page, int $maxPage): string {
 		$replacements = [
 			"{page}" => $page,
 			"{maxPage}" => $maxPage,
