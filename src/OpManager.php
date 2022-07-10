@@ -67,7 +67,7 @@ class OpManager {
 			$sender->sendMessage(TextFormat::colorize($this->getConfig()->get("noOperator", "§e» §cNo operator!")));
 			return;
 		}
-		$maxPage = ceil(count($ops) / $this->getPerPage());
+		$maxPage = intval(ceil(count($ops) / $this->getPerPage()));
 		if ($page < 1 || $page > $maxPage) {
 			$sender->sendMessage(TextFormat::colorize( $this->getConfig()->get("pageNotFound", "§e»§c Page not found!")));
 			return;
